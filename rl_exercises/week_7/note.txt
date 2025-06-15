@@ -1,0 +1,8 @@
+I think RND is a good fit for DQN at the beginning of the training, because it rewards the agent for visiting unseen states.
+Initially this is important to explore the environment and to find good strategies.
+
+However, later in the training the advantage of RND compared to epsilon-greedy becomes smaller.
+This can also be seen in the comparison-plot, where roughly until step 20,000 RND shows a higher reward than epsilon-greedy, but afterwards the difference becomes very small.
+This is a disadvantage, because RND-agents use extra neural-networks for the RND-bonus, which impacts performance, which is not the case for epsilon-greedy.
+
+However, in general I think RND is nevertheless a good fit for DQN, because early exploration is important, and later on it does not choose completely random actions like epsilon-greedy, which can otherwise be a big issue for some tasks/games.
